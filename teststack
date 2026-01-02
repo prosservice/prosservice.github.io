@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CinciSmiles - Milford, OH | Family & Cosmetic Dentist Near Cincinnati</title>
+  <meta name="description" content="CinciSmiles - Milford, OH provides family dentistry, cosmetic dentistry, implants, Invisalign, teeth whitening, emergency dental care, and sleep dentistry near Cincinnati, OH." />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://cincismiles.com" />
+
+  <style>
+    :root{
+      --bg:#070A0F;
+      --ink:#EEF4FB;
+      --muted:#A9B6C7;
+      --line:rgba(255,255,255,.12);
+      --card:rgba(255,255,255,.05);
+      --card2:rgba(255,255,255,.035);
+      --shadow:0 22px 70px rgba(0,0,0,.55);
+      --r1:18px;
+      --r2:28px;
+      --max:1180px;
+      --accent:#7AA7FF;
+      --accent2:#8CFFB3;
+      --warm:#FFE7A6;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--ink);
+      background:
+        radial-gradient(1100px 700px at 18% 10%, rgba(122,167,255,.18), transparent 55%),
+        radial-gradient(1000px 650px at 90% 0%, rgba(140,255,179,.14), transparent 55%),
+        radial-gradient(820px 520px at 90% 92%, rgba(255,231,166,.10), transparent 55%),
+        var(--bg);
+      line-height:1.65;
+    }
+    a{color:inherit}
+    .container{width:100%; max-width:var(--max); margin:0 auto; padding:0 20px;}
+
+    /* Topbar */
+    .topbar{
+      position:sticky; top:0; z-index:99;
+      backdrop-filter: blur(14px);
+      background: rgba(7,10,15,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+      min-width:260px;
+    }
+    .brand img{
+      height:30px; width:auto; display:block;
+      filter: drop-shadow(0 12px 28px rgba(122,167,255,.12));
+    }
+    .brand .tag{font-size:12px; color:var(--muted); margin-top:2px; white-space:nowrap;}
+    nav.links{
+      display:flex; gap:14px; align-items:center;
+      color:var(--muted); font-size:14px;
+    }
+    nav.links a{
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:12px;
+      transition:.2s ease;
+    }
+    nav.links a:hover{
+      background:rgba(255,255,255,.06);
+      color:var(--ink);
+      transform:translateY(-1px);
+    }
+    .cta{display:flex; gap:10px; align-items:center;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      font-weight:900;
+      font-size:14px;
+      text-decoration:none;
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.07);}
+    .btn.primary{
+      border:1px solid rgba(122,167,255,.28);
+      background:linear-gradient(135deg, rgba(122,167,255,.18), rgba(140,255,179,.12));
+    }
+
+    /* Hero */
+    header.hero{padding:56px 0 26px;}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .panel{
+      border:1px solid var(--line);
+      border-radius:var(--r2);
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-copy{padding:34px;}
+    .chip{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .spark{
+      width:9px; height:9px; border-radius:99px;
+      background:var(--accent2);
+      box-shadow:0 0 0 6px rgba(140,255,179,.12);
+    }
+    h1{
+      margin:16px 0 12px;
+      font-size:44px;
+      line-height:1.08;
+      letter-spacing:-.7px;
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      max-width:68ch;
+      font-size:16px;
+    }
+    .sub a{
+      color:var(--accent);
+      text-decoration:none;
+      border-bottom:1px solid rgba(122,167,255,.35);
+    }
+    .sub a:hover{border-bottom-color:rgba(122,167,255,.75);}
+    .hero-actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
+    .trust{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; color:var(--muted); font-size:13px;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.03); padding:8px 10px; border-radius:999px;}
+
+    .hero-visual{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      padding:14px;
+      min-height:440px;
+    }
+    .media{
+      border-radius:20px;
+      border:1px solid var(--line);
+      overflow:hidden;
+      position:relative;
+      background:#070A0F;
+      flex:1;
+      min-height:180px;
+    }
+    .media img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.02);}
+    .badge{
+      position:absolute; left:12px; bottom:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(7,10,15,.70);
+      backdrop-filter: blur(10px);
+      font-size:12px;
+      color:rgba(238,244,251,.92);
+    }
+
+    /* Sections */
+    section{padding:28px 0;}
+    .section-head{
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap:16px; margin-bottom:14px;
+    }
+    h2{margin:0; font-size:28px; letter-spacing:-.35px;}
+    .lead{margin:0; color:var(--muted); max-width:78ch;}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+    }
+    .card{
+      grid-column: span 4;
+      border-radius:var(--r1);
+      border:1px solid var(--line);
+      background:var(--card2);
+      padding:18px;
+      box-shadow:0 12px 34px rgba(0,0,0,.35);
+    }
+    .card h3{margin:0 0 8px; font-size:16px;}
+    .card p{margin:0; color:var(--muted); font-size:14px;}
+    .mini{margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:12px;}
+    .mini span{border:1px solid var(--line); padding:6px 8px; border-radius:999px; background:rgba(255,255,255,.03);}
+
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .big{
+      border:1px solid var(--line);
+      border-radius:var(--r2);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .big .pad{padding:22px;}
+    .big .heroimg{height:280px;}
+    .big .heroimg img{width:100%; height:100%; object-fit:cover; display:block;}
+    .big ul{margin:12px 0 0; padding-left:18px; color:var(--muted);}
+    .big li{margin:8px 0;}
+
+    /* FAQ */
+    details{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:14px 16px;
+    }
+    summary{cursor:pointer; font-weight:900; letter-spacing:-.2px;}
+    details p{margin:10px 0 0; color:var(--muted); font-size:14px;}
+
+    /* Map + NAP */
+    .mapwrap{
+      border:1px solid var(--line);
+      border-radius:var(--r2);
+      overflow:hidden;
+      background:#070A0F;
+      box-shadow:var(--shadow);
+    }
+    iframe{width:100%; border:0;}
+    footer{
+      padding:28px 0 52px;
+      border-top:1px solid var(--line);
+      margin-top:18px;
+    }
+    .nap{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    .nap .box{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:var(--r1);
+      padding:18px;
+    }
+    .muted{color:var(--muted);}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      nav.links{display:none;}
+      .hero-grid{grid-template-columns:1fr;}
+      h1{font-size:36px;}
+      .split{grid-template-columns:1fr;}
+      .card{grid-column: span 12;}
+      .nap{grid-template-columns:1fr;}
+    }
+  </style>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Dentist",
+    "name":"CinciSmiles - Milford, Oh",
+    "url":"http://www.cincismiles.com/",
+    "telephone":"+15132488848",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"5722 Signal Hill Ct",
+      "addressLocality":"Milford",
+      "addressRegion":"OH",
+      "postalCode":"45150",
+      "addressCountry":"US"
+    },
+    "sameAs":[
+      "https://www.google.com/maps/place/CinciSmiles+-+Milford,+Oh/@39.1862946,-84.2667201,17z/data=!3m1!4b1!4m6!3m5!1s0x8840fff9268291c7:0xba1e69235eb08f14!8m2!3d39.1862946!4d-84.2667201!16s%2Fg%2F1tcvvjtb"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="CinciSmiles home">
+          <img src="https://cincismiles.com/wp-content/uploads/2024/05/cincismiles-logo.svg" alt="CinciSmiles logo" />
+          <div>
+            <div style="font-weight:900; letter-spacing:.2px;">CinciSmiles - Milford, OH</div>
+            <div class="tag">Family • Cosmetic • Restorative Dentistry near Cincinnati</div>
+          </div>
+        </a>
+
+        <nav class="links" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#cosmetic">Cosmetic</a>
+          <a href="#implants">Implants</a>
+          <a href="#faq">FAQ</a>
+          <a href="#location">Location</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn" href="tel:+15132488848">Call: (513) 248-8848</a>
+          <a class="btn primary" href="http://www.cincismiles.com/" target="_blank" rel="noopener">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="panel">
+          <div class="hero-copy">
+            <div class="chip">
+              <span class="spark" aria-hidden="true"></span>
+              Cincinnati dentist • Family dentist Cincinnati • Cosmetic dentist Cincinnati
+            </div>
+
+            <h1>Dental care that feels personal—serving Milford and the greater Cincinnati area.</h1>
+
+            <!-- 1st paragraph includes site URL (SEO + trust) -->
+            <p class="sub">
+              <strong>CinciSmiles - Milford, OH</strong> (<a href="http://www.cincismiles.com/" target="_blank" rel="noopener">cincismiles.com</a>) is a modern dental practice built around comfort,
+              clarity, and long-term results. If you’re looking for a <strong>Cincinnati dentist</strong> or a trusted
+              <strong>dentist in Cincinnati OH</strong> who provides everything from preventive care to advanced cosmetic and restorative solutions,
+              you’re in the right place.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#contact">Request an Appointment</a>
+              <a class="btn" href="#services">Explore Services</a>
+              <a class="btn" href="https://www.google.com/maps/place/CinciSmiles+-+Milford,+Oh/@39.1862946,-84.2667201,17z/data=!3m1!4b1!4m6!3m5!1s0x8840fff9268291c7:0xba1e69235eb08f14!8m2!3d39.1862946!4d-84.2667201!16s%2Fg%2F1tcvvjtb" target="_blank" rel="noopener">Directions</a>
+            </div>
+
+            <div class="trust" aria-label="Highlights">
+              <span class="pill">Emergency dentist Cincinnati</span>
+              <span class="pill">Invisalign Cincinnati</span>
+              <span class="pill">Teeth whitening Cincinnati</span>
+              <span class="pill">Sleep dentistry Cincinnati</span>
+              <span class="pill">Restorative dental care Cincinnati</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel hero-visual" aria-label="Practice visuals">
+          <!-- Working stock images (swap with real photos anytime) -->
+          <div class="media">
+            <img
+              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1600&q=80"
+              alt="Modern dental office reception area"
+              loading="lazy"
+            />
+            <div class="badge">Comfort-first modern care</div>
+          </div>
+          <div class="media" style="flex:.9">
+            <img
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80"
+              alt="Dental care with professional tools"
+              loading="lazy"
+            />
+            <div class="badge">Clear guidance, gentle treatment</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Overview -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Complete dentistry—under one roof</h2>
+          <p class="lead">
+            CinciSmiles supports your smile from everyday prevention to advanced treatments. Families choose us as their
+            <strong>family dentist Cincinnati</strong> area patients trust because care stays consistent, modern, and tailored.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Family Dentistry</h3>
+          <p>Routine exams, cleanings, and prevention—built for long-term oral health and a positive experience for every age.</p>
+          <div class="mini"><span>Preventive care</span><span>Gentle approach</span><span>All ages</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Emergency Dentist Cincinnati</h3>
+          <p>Tooth pain, broken teeth, swelling, or urgent issues—get help fast with a clear plan and compassionate care.</p>
+          <div class="mini"><span>Same-day help (when available)</span><span>Pain relief</span><span>Clear next steps</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Restorative Dental Care Cincinnati</h3>
+          <p>Repair and protect your smile with modern restorative options designed for comfort, function, and durability.</p>
+          <div class="mini"><span>Function first</span><span>Natural look</span><span>Long-lasting</span></div>
+        </div>
+
+        <div class="card" id="cosmetic">
+          <h3>Cosmetic Dentist Cincinnati</h3>
+          <p>Refine shape, shade, and symmetry with whitening and cosmetic enhancements tailored to your goals.</p>
+          <div class="mini"><span>Smile-focused</span><span>Natural results</span><span>Confidence boost</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Teeth Whitening Cincinnati</h3>
+          <p>Professional whitening options for a noticeably brighter smile—with guidance to help reduce sensitivity.</p>
+          <div class="mini"><span>Safe approach</span><span>Fast results</span><span>Event-ready</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Gum Contouring Cincinnati</h3>
+          <p>Balance your smile line by refining the gum shape—ideal for “gummy smiles” or uneven gum contours.</p>
+          <div class="mini"><span>Smile symmetry</span><span>Refined aesthetics</span><span>Confidence</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Treatments -->
+  <section>
+    <div class="container">
+      <div class="split">
+        <div class="big" id="implants">
+          <div class="heroimg">
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=80"
+              alt="Dental consultation and smile planning"
+              loading="lazy"
+            />
+          </div>
+          <div class="pad">
+            <h2 style="margin:0 0 8px;">Cincinnati dental implants</h2>
+            <p class="muted" style="margin:0;">
+              Missing teeth can impact chewing, confidence, and long-term oral health. Our implant-focused planning supports stable,
+              natural-looking replacement options designed around your goals and comfort.
+            </p>
+            <ul>
+              <li><strong>Clear consultation</strong> and step-by-step treatment guidance</li>
+              <li><strong>Function + aesthetics</strong> for a smile that feels natural</li>
+              <li><strong>Long-term planning</strong> to support bone and bite stability</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="big">
+          <div class="pad">
+            <h2 style="margin:0 0 8px;">Invisalign Cincinnati + modern alignment</h2>
+            <p class="muted" style="margin:0;">
+              Want straighter teeth without traditional braces? Clear aligners are a popular option for adults and teens looking
+              for a discreet way to improve alignment and confidence.
+            </p>
+            <div class="grid" style="margin-top:14px;">
+              <div class="card" style="grid-column: span 12;">
+                <h3>Clear aligner planning</h3>
+                <p>We evaluate your bite, spacing, and goals—then outline what results to expect and how long it may take.</p>
+                <div class="mini"><span>Discreet</span><span>Custom plan</span><span>Confidence</span></div>
+              </div>
+              <div class="card" style="grid-column: span 12;">
+                <h3>Smile refinement</h3>
+                <p>Aligners can pair beautifully with whitening or cosmetic touches for a polished final look.</p>
+                <div class="mini"><span>Whitening-ready</span><span>Cosmetic options</span><span>Natural finish</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="heroimg">
+            <img
+              src="https://images.unsplash.com/photo-1629909615182-8e98c7e64de2?auto=format&fit=crop&w=1600&q=80"
+              alt="Modern dental care and cosmetic dentistry"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comfort / Sleep Dentistry -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Comfort-first care—including sleep dentistry</h2>
+          <p class="lead">
+            If dental anxiety has kept you away, you’re not alone. Our team prioritizes comfort, communication, and a calm approach.
+            Ask about <strong>sleep dentistry Cincinnati</strong> options and how we help make visits easier.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Clear explanations</h3>
+          <p>We talk through options, timing, and expectations so you always feel informed and in control.</p>
+        </div>
+        <div class="card">
+          <h3>Gentle approach</h3>
+          <p>Comfort techniques, modern tools, and thoughtful pacing to help reduce stress during treatment.</p>
+        </div>
+        <div class="card">
+          <h3>Sleep dentistry Cincinnati</h3>
+          <p>For patients who need extra support, ask about sedation-style options and what may be appropriate for your care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>FAQ</h2>
+          <p class="lead">Quick answers about dental care near Cincinnati and Milford.</p>
+        </div>
+      </div>
+
+      <div class="grid" style="gap:12px;">
+        <div class="card" style="grid-column: span 12; padding:0; background:transparent; border:0; box-shadow:none;">
+          <details>
+            <summary>Are you accepting families and new patients?</summary>
+            <p>Yes—many patients choose CinciSmiles as their family dentist. Call to ask about availability and scheduling.</p>
+          </details>
+        </div>
+
+        <div class="card" style="grid-column: span 12; padding:0; background:transparent; border:0; box-shadow:none;">
+          <details>
+            <summary>Do you offer emergency dental care?</summary>
+            <p>If you have tooth pain, a broken tooth, swelling, or an urgent issue, contact us. We’ll guide you on next steps and timing.</p>
+          </details>
+        </div>
+
+        <div class="card" style="grid-column: span 12; padding:0; background:transparent; border:0; box-shadow:none;">
+          <details>
+            <summary>Can I combine Invisalign and whitening?</summary>
+            <p>Often, yes. Many patients align their teeth first, then whiten for a brighter, more even look. We’ll help you plan the best sequence.</p>
+          </details>
+        </div>
+
+        <div class="card" style="grid-column: span 12; padding:0; background:transparent; border:0; box-shadow:none;">
+          <details>
+            <summary>Where are you located?</summary>
+            <p>We’re located at 5722 Signal Hill Ct, Milford, OH 45150. Scroll down for the embedded map and NAP details.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="big">
+        <div class="pad">
+          <h2 style="margin:0 0 8px;">Request an appointment</h2>
+          <p class="muted" style="margin:0;">
+            Looking for a <strong>Cincinnati dentist</strong> who offers family, cosmetic, and restorative care with comfort-first support?
+            CinciSmiles is here for you.
+          </p>
+          <div class="hero-actions" style="margin-top:14px;">
+            <a class="btn primary" href="tel:+15132488848">Call: +1 513-248-8848</a>
+            <a class="btn" href="http://www.cincismiles.com/" target="_blank" rel="noopener">Visit: cincismiles.com</a>
+            <a class="btn" href="https://www.google.com/maps/place/CinciSmiles+-+Milford,+Oh/@39.1862946,-84.2667201,17z/data=!3m1!4b1!4m6!3m5!1s0x8840fff9268291c7:0xba1e69235eb08f14!8m2!3d39.1862946!4d-84.2667201!16s%2Fg%2F1tcvvjtb" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP + NAP (Required at end) -->
+  <section id="location">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Find CinciSmiles - Milford, OH</h2>
+          <p class="lead">Directions below—serving Milford and the greater Cincinnati area.</p>
+        </div>
+      </div>
+
+      <div class="mapwrap" aria-label="CinciSmiles map">
+        <!-- Provided embed (kept, with responsive width via CSS) -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6942.401797424647!2d-84.26621557197328!3d39.18634857406098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840fff9268291c7%3A0xba1e69235eb08f14!2sCinciSmiles%20-%20Milford%2C%20Oh!5e0!3m2!1sen!2sus!4v1767307054010!5m2!1sen!2sus"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="CinciSmiles - Milford, OH Map">
+        </iframe>
+      </div>
+
+      <footer>
+        <div class="section-head" style="margin-top:18px;">
+          <div>
+            <h2>NAP</h2>
+            <p class="lead">Name • Address • Phone</p>
+          </div>
+        </div>
+
+        <div class="nap">
+          <div class="box">
+            <img src="https://cincismiles.com/wp-content/uploads/2024/05/cincismiles-logo.svg"
+                 alt="CinciSmiles logo"
+                 style="height:28px;width:auto;display:block;margin-bottom:10px;" />
+            <strong>CinciSmiles - Milford, OH</strong><br />
+            <span class="muted">Cincinnati dentist • Dentist in Cincinnati OH • Family dentist Cincinnati</span><br /><br />
+            <span class="muted">Address:</span><br />
+            5722 Signal Hill Ct, Milford, OH 45150
+          </div>
+
+          <div class="box">
+            <span class="muted">Phone:</span><br />
+            <a href="tel:+15132488848" style="text-decoration:none; font-weight:900;">+1 513-248-8848</a>
+            <br /><br />
+            <span class="muted">Website:</span><br />
+            <a href="http://www.cincismiles.com/" target="_blank" rel="noopener" style="text-decoration:none; font-weight:900;">http://www.cincismiles.com/</a>
+            <br /><br />
+            <span class="muted">Google Business:</span><br />
+            <a href="https://www.google.com/maps/place/CinciSmiles+-+Milford,+Oh/@39.1862946,-84.2667201,17z/data=!3m1!4b1!4m6!3m5!1s0x8840fff9268291c7:0xba1e69235eb08f14!8m2!3d39.1862946!4d-84.2667201!16s%2Fg%2F1tcvvjtb"
+               target="_blank" rel="noopener" style="text-decoration:none; font-weight:900;">
+              View on Google Maps
+            </a>
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top:16px; font-size:12px;">
+          © <span id="year"></span> CinciSmiles - Milford, OH • Cincinnati dental implants • Invisalign Cincinnati • Teeth whitening Cincinnati
+        </p>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
